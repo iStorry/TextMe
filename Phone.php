@@ -13,11 +13,3 @@
 	 } else {
 	 	$ne->signup();
 	 }
-
-
-
-	 // if (isset($res->verification_url)){
-
-	 // }
-	
-	
