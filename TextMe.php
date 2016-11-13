@@ -41,8 +41,7 @@ class TextMe
 			$txt = $this->email.":".$this->password.":".$this->username.":".$this->uuid;
 			fwrite($file, $txt);
 			fclose($file);
-			//echo json_encode(array("email" => $this->email, "password" => $this->password, "username" => $this->username, "verification_url" => $results->verification_url));
-			header("Location: ".$results->verification_url."&redirect=http://example.com/Phone.php?email=".$this->email);
+			header("Location: ".$results->verification_url."&redirect=http://istorry.com/TextMe/Phone.php?email=".$this->email);
 
 		}
 	}
@@ -52,7 +51,7 @@ class TextMe
 	{
 		$post = "username=".$username."&password=" . $password . "&email=" . $email . "&device_uid=".$uuid."&verification_token=".$token;
 		$results =  $this->execute($this->url() , $post, $this->header($post));
-		return $results;
+		
 	}
 
 
