@@ -41,7 +41,7 @@ class TextMe
 			$txt = $this->email.":".$this->password.":".$this->username.":".$this->uuid;
 			fwrite($file, $txt);
 			fclose($file);
-			header("Location: ".$results->verification_url."&redirect=http://istorry.com/TextMe/Phone.php?email=".$this->email);
+			header("Location: ".$results->verification_url."&redirect=http://example.com/TextMe/Phone.php?email=".$this->email);
 
 		}
 	}
