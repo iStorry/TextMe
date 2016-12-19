@@ -4,7 +4,7 @@ class TextMe
 {
 	protected $url = "https://api.textme-app.com/api";
 	protected $bundle_id = "com.textmeinc.textme2.android";
-	protected $version = "3.5.5";
+	protected $version = "3.7.10";
 	protected $appID = "00f00c000f00f0fd";
 	protected $uuid = "00000a00-c000-0000-070e-000bdd0d000a";
 	protected $rand = "https://api.randomuser.me/?nat=en";
@@ -68,7 +68,7 @@ class TextMe
 	function header($post)
 	{
 		$arr = array();
-		$arr[] = "User-Agent: TextMe/3.5.5 (Android 4.4.4; HTC One X;)";
+		$arr[] = "User-Agent: TextMe/3.7.10 (Android 5.1.1; HTC One X;)";
 		$arr[] = "X-HGYVER: " . $this->gen($this->ver);
 		$arr[] = "X-BUNDLE-ID: " . $this->bundle_id;
 		$arr[] = "X-TIMESTAMP: " . $this->time;
