@@ -9,6 +9,7 @@ class TextMe
 	protected $uuid = "00000a00-c000-0000-070e-000bdd0d000a";
 	protected $rand = "https://api.randomuser.me/?nat=en";
 	protected $ver = "3249f6f831d6ae44eb4ce0801530db8dfb699bce122e1f2dfdc171158aa756bf";
+	protected $time = "1482126920015";
 	protected $password;
 	protected $mail;
 	protected $username;
@@ -24,6 +25,7 @@ class TextMe
 	{
 		$this->gen($this->appID);
 		$this->gen($this->uuid);
+		$this->gen($this->time);
 	}
 	public
 	function signup()
@@ -69,7 +71,7 @@ class TextMe
 		$arr[] = "User-Agent: TextMe/3.5.5 (Android 4.4.4; HTC One X;)";
 		$arr[] = "X-HGYVER: " . $this->gen($this->ver);
 		$arr[] = "X-BUNDLE-ID: " . $this->bundle_id;
-		$arr[] = "X-TIMESTAMP: 1478844445221";
+		$arr[] = "X-TIMESTAMP: " . $this->time;
 		$arr[] = "Content-Type: application/x-www-form-urlencoded; charset=UTF-8";
 		$arr[] = "Host: api.textme-app.com";
 		$arr[] = "Connection: Keep-Alive";
